@@ -1,0 +1,48 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "scroll-search-select": {
+      "projectType": "library",
+      "root": "projects/scroll-search-select",
+      "sourceRoot": "projects/scroll-search-select/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/scroll-search-select/tsconfig.lib.json",
+            "project": "projects/scroll-search-select/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/scroll-search-select/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/scroll-search-select/src/test.ts",
+            "tsConfig": "projects/scroll-search-select/tsconfig.spec.json",
+            "karmaConfig": "projects/scroll-search-select/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/scroll-search-select/tsconfig.lib.json",
+              "projects/scroll-search-select/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "scroll-search-select"
+}
