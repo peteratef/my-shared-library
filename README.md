@@ -154,3 +154,16 @@ this.filter = filter ? filter : '';
 @Output() onScroll = new EventEmitter<any>();
 @Output() onTouch = new EventEmitter<any>();
 @Output() onClickOutside = new EventEmitter<any>();
+
+## Keywords
+
+- Single Select DropDown
+- Multiple Select DropDown
+- Server side search
+- loadmore from server side
+- Infinite Scroll
+- simple ui/ux
+- disable rows
+- High performance as its loading data from Server Side
+- select with load more from Backend
+- single/mutiple drop down with search and loadmore
